@@ -1,0 +1,20 @@
+B4 — Cross-user RAG document processing
+
+Date: 2026-10-01
+
+Authenticated principal: test1
+Target file owner: test2
+Target file ID: 60f4b5af-a4cd-42f3-8a4c-f3d95161df2f
+Target filename: home_security.txt
+Target collection: b4-test1
+
+Request:
+POST /rag/api/v1/process/doc
+
+Response:
+HTTP/1.1 200 OK
+
+{"status":true,"collection_name":"b4-test1","known_type":true,"filename":"home_security.txt"}
+
+Observation:
+test1 successfully caused the server to process a file owned by test2 without an ownership rejection.
