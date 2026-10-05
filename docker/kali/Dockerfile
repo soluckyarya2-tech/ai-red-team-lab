@@ -19,7 +19,12 @@ RUN apt-get update && apt-get install -y \
     netcat-openbsd \
     iputils-ping \
     dnsutils \
+    socat \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Adversarial LLM scanner (pinned for reproducible rebuilds)
+RUN pip3 install --break-system-packages garak==0.17.0 \
+    || pip3 install --break-system-packages garak
 
 CMD ["bash"]
