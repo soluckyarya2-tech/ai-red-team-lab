@@ -15,7 +15,7 @@ Token validity was never verified before the attack.
 
 ## Corrected method
 1. Baseline: attacker token validated via GET /api/v1/auths/ → 200
-   (test2@gmail.com, role: user)
+   (test2@lab.local, role: user)
 2. Baseline: attacker reads own chat → 200, user_id matches token
 3. Attack: attacker token → victim chat → result
 4. Control: victim token → victim chat → result
