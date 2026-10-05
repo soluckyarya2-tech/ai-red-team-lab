@@ -28,3 +28,8 @@ Full reproduction: findings/evidence/B4/B4_reproduction.md
 ## Remediation
 Ownership check in /process/doc (mirror files router); audit all sibling
 RAG routes; collection ACLs as defense in depth.
+
+## Auth boundary probe (2026-10-05)
+Request without Authorization header → 403 "Not authenticated".
+Authentication IS enforced on /process/doc; ownership is NOT.
+F6 remains scoped as: authenticated cross-user IDOR (not unauthenticated access).
