@@ -5,3 +5,4 @@
   invalid (pre-rotation) JWT, not an access-control bypass. Re-test with
   validated tokens returned 401 = proper ownership denial.
   See F2_chats_router.md for the corrected verdict and full matrix.
+- intel-table_2026-09-29.pdf — pre-retraction board snapshot; duplicate of the md (which is canonical). Kept as audit artifact.
